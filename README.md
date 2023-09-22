@@ -111,10 +111,11 @@ The Workflow of how moveit works from urdf is explained here:
 
 ## 9. Running in Docker Container : (For Niryo Ned Robot)
 Here we have created the docker containers for the models scripts and the all dependencies to run this architecture in the docker container
-$ xhost local:docker
-$ docker build . -t <name_for_docker_container>
-$ docker run -it --rm --privileged --env="DISPLAY" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --device="/dev/video0:/dev/video0" cdl:socks_storing2 python3 inference/only_camera_inference.py
-
+```
+xhost local:docker
+docker build . -t <name_for_docker_container>
+docker run -it --rm --privileged --env="DISPLAY" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --device="/dev/video0:/dev/video0" cdl:socks_storing2 python3 inference/only_camera_inference.py
+```
 
 ## 10. Demo
 #### Connecting two ROS systems:
